@@ -1,0 +1,15 @@
+/* Active Link Styling */
+.navbar .nav-link.active {
+    color: #ff6347 !important;
+    font-weight: bold;
+  }
+  
+  /* Add margin to social icons */
+  .navbar .d-flex {
+    margin-top: 10px;
+  }
+  
+  .navbar-toggler {
+    border-color: #ffffff;
+  }
+  
