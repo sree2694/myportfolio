@@ -1,45 +1,42 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
-import { FaArrowDown } from "react-icons/fa"; // Icon for Call-to-action
-import developerGif from '../assets/developer.gif';
+import { Container, Typography, Button } from "@mui/material";
+import { Link } from "react-router-dom";
+import "../css/Home.css";
+import developerGif from "../assets/developer.gif"; // Ensure correct path
 
 const Home = () => {
   return (
-    <div className="home-section">
-      <Container fluid className="pt-5">
-        <Row className="align-items-center">
-          {/* Left Side: Introduction */}
-          <Col md={6} className="text-center text-md-start">
-            <h1 className="display-4 fw-bold animate__animated animate__fadeInLeft">
-              Welcome to My Portfolio
-            </h1>
-            <p className="lead text-muted animate__animated animate__fadeIn animate__delay-1s">
-              I am John Doe, a passionate Fullstack Developer. I specialize in creating dynamic and scalable web applications.
-            </p>
-            <Button
-              variant="primary"
-              className="mt-4 px-5 py-3 animate__animated animate__fadeIn animate__delay-2s"
-              href="#projects"
-            >
-              View My Projects <FaArrowDown />
-            </Button>
-          </Col>
+    
+    <Container className="home-container" disableGutters maxWidth={false}>
 
-          {/* Right Side: Image */}
-          <Col md={6} className="text-center">
-            <img
-              src={developerGif} // Replace with your image path
-              alt="developer gif"
-              className="img-fluid rounded-circle shadow-lg animate__animated animate__fadeIn animate__delay-3s"
-              style={{ maxWidth: "450px", height: "auto" }}
-            />
-          </Col>
-        </Row>
+      {/* Left Section - Text */}
+      <div className="home-text">
+        <Typography variant="h2" className="home-title">
+          Hi, I'm a Full-Stack Developer
+        </Typography>
 
-        {/* Background Animation */}
-        <div className="background-animation"></div>
-      </Container>
-    </div>
+        <Typography variant="body1" className="home-description">
+          Passionate about building scalable applications, crafting seamless
+          user experiences, and optimizing performance. I enjoy learning new
+          technologies and solving complex problems.
+        </Typography>
+
+        {/* Call to Action Buttons */}
+        <div className="cta-buttons">
+          <Button className="cta-button" component={Link} to="/projects">
+            View My Work
+          </Button>
+          <Button className="cta-button" component={Link} to="/contact">
+            Let's Connect
+          </Button>
+        </div>
+      </div>
+
+      {/* Right Section - GIF Image */}
+      <div className="home-image">
+        <img src={developerGif} alt="Developer Animation" />
+      </div>
+    </Container>
   );
 };
 

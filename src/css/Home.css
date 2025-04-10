@@ -1,83 +1,134 @@
-/* App.css or Home.css */
+* {
+  box-sizing: border-box;
+}
+/* Main Container */
+.home-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+  padding: 15vh 5vw;
+  margin: 0;
+  background: linear-gradient(45deg, #00bcd4, #ff9800);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  color: white;
+  box-sizing: border-box;
+  overflow: hidden;
+}
 
-/* Background animation */
-.home-section {
-    position: relative;
-    background: linear-gradient(45deg, #00bcd4, #ff9800);
-    background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite;
-    padding-top: 50px;
-    min-height: 100vh;
+
+/* Left Section - Text */
+.home-text {
+  max-width: 50%;
+  animation: fadeInLeft 1.2s ease-in-out;
+}
+
+.home-title {
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.home-description {
+  font-size: 1.4rem;
+  margin-top: 2vh;
+  line-height: 1.6;
+}
+
+/* Call to Action Buttons */
+.cta-buttons {
+  margin-top: 4vh;
+  display: flex;
+  gap: 1vw;
+  color: rgb(203, 181, 181);
+}
+
+.cta-button {
+  background-color: #ffdd57;
+  color: rgb(203, 181, 181);
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(255, 221, 87, 0.4);
+}
+
+/* Right Section - GIF Image */
+.home-image {
+  max-width: 45%;
+  display: flex;
+  justify-content: center;
+  animation: fadeInRight 1.2s ease-in-out;
+}
+
+.home-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Fix: Wrap on smaller screens */
+@media (max-width: 900px) {
+  .home-container {
+    flex-direction: column;
+    padding: 20vh 5vw;
+    text-align: center;
   }
-  
-  /* Background Animation Keyframe */
-  @keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+
+  .home-text, .home-image {
+    max-width: 100%;
   }
-  
-  /* Animating the Title */
-  .display-4 {
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-    font-weight: 700;
-    animation: fadeInLeft 2s ease-out;
+
+  .cta-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
   }
-  
-  /* Button hover effect */
-  button:hover {
-    background-color: #ff6347;
-    color: white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  .cta-button {
+    margin-bottom: 1rem;
   }
-  
-  /* Hover effect for the image */
-  img:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  /* Make sure the button stands out */
-  button {
-    font-size: 1.2rem;
-    padding: 12px 20px;
-    border-radius: 30px;
+  50% {
+    background-position: 100% 50%;
   }
-  
-  /* Image styling */
-  img {
-    max-width: 450px;
-    border: 5px solid #fff;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease-out;
+  100% {
+    background-position: 0% 50%;
   }
-  
-  /* Ensuring the layout is spaced out */
-  .home-section p {
-    max-width: 600px;
-    margin: 0 auto;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
   }
-  
-  button {
-    font-size: 1rem;
-    border-radius: 25px;
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  /* Animations on Button */
-  @keyframes fadeInButton {
-    0% {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
   }
-  
-  button.animate__fadeIn {
-    animation: fadeInButton 2s ease-out;
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
+}

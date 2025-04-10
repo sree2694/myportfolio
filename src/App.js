@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Container } from "react-bootstrap";
 import NavbarComponent from "./components/NavbarComponent"; 
 import Home from "./pages/Home";
 import Skills from "./pages/Skills";
@@ -18,7 +17,6 @@ function App() {
     <ErrorBoundary>
     <Router>
       <NavbarComponent />
-      <Container>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/skills" element={<Skills />} />
@@ -27,7 +25,6 @@ function App() {
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </Container>
     </Router>
     </ErrorBoundary>
   );

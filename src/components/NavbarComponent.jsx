@@ -12,8 +12,8 @@ const NavbarComponent = () => {
   const handleToggle = () => setExpanded(!expanded);
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" fixed="top" expanded={expanded}>
-      <Container>
+    <Navbar bg="light" variant="light" expand="lg" fixed="top" expanded={expanded}>
+      <Container fluid>
         {/* Brand/Logo */}
         <Navbar.Brand as={Link} to="/" onClick={() => setExpanded(false)}>
           MyPortfolio
@@ -80,7 +80,7 @@ const NavbarComponent = () => {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white me-3"
+                className="text-black me-3"
               >
                 <FaLinkedin size={25} />
               </a>
@@ -88,7 +88,7 @@ const NavbarComponent = () => {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white me-3"
+                className="text-black me-3"
               >
                 <FaGithub size={25} />
               </a>
@@ -96,7 +96,7 @@ const NavbarComponent = () => {
                 href="https://hackerrank.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white"
+                className="text-black"
               >
                 <FaHackerrank size={25} />
               </a>
