@@ -1,11 +1,14 @@
 /* Skills Section - Fully Responsive */
 .skills-container {
   text-align: center;
-  padding: 8vh 4vw; /* Increased padding for better top/bottom spacing */
+  padding: 10vh 4vw; /* Increased padding for better top/bottom spacing */
   min-height: 100vh; /* Full screen height */
   background: linear-gradient(to right, #1f1c2c, #928dab);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
   color: white;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* Title Styling */
@@ -148,5 +151,39 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

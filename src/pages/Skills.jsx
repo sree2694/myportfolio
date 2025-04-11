@@ -84,8 +84,8 @@ const skillsData = [
 const Skills = () => {
   return (
     <Container className="skills-container" disableGutters maxWidth={false}>
-      <Typography variant="h3" className="skills-title" gutterBottom>
-        My Tech Stack 🚀
+      <Typography variant="h2" className="skills-title" gutterBottom>
+        My Tech Stack 
       </Typography>
 
       {skillsData.map((category, index) => (

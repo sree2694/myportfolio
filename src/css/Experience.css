@@ -1,0 +1,120 @@
+.experience-container {
+    text-align: center;
+    padding: 10vh 4vw; /* Increased padding for better top/bottom spacing */
+    min-height: 100vh; /* Full screen height */
+    background: linear-gradient(to right, #1e1e2f, #50506e); /* Dark Professional Gradient */
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: white;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .section-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #ffffff;
+  }
+  
+  .experience-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.25);
+  }
+  
+  .experience-logo {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    background: white;
+    padding: 10px;
+  }
+  
+  .experience-details {
+    flex: 1;
+  }
+  
+  .experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .experience-header h3 {
+    font-size: 1.8rem;
+    color: #00c6ff;
+    margin: 0;
+  }
+  
+  .company-name {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #ddd;
+  }
+  
+  .date-range {
+    font-size: 1rem;
+    color: #bbb;
+    font-style: italic;
+  }
+  
+  .experience-description {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+  }
+  
+  /* Alternating Layout */
+  .experience-card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  @media (max-width: 768px) {
+    .experience-container {
+      padding: 40px 5%;
+    }
+  
+    .experience-card {
+      flex-direction: column !important;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .experience-logo {
+      width: 80px;
+    }
+  
+    .experience-header h3 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }

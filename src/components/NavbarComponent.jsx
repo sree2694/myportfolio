@@ -43,6 +43,14 @@ const NavbarComponent = () => {
             </Nav.Link>
             <Nav.Link
               as={Link}
+              to="/experience"
+              onClick={() => setExpanded(false)}
+              className={location.pathname === "/experience" ? "active" : ""}
+            >
+              Experience
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
               to="/projects"
               onClick={() => setExpanded(false)}
               className={location.pathname === "/projects" ? "active" : ""}
@@ -77,7 +85,7 @@ const NavbarComponent = () => {
             {/* Social Links */}
             <div className="d-flex ms-3">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/sreekanth-j-developer/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black me-3"
@@ -85,7 +93,7 @@ const NavbarComponent = () => {
                 <FaLinkedin size={25} />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/sree2694"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black me-3"
@@ -93,7 +101,7 @@ const NavbarComponent = () => {
                 <FaGithub size={25} />
               </a>
               <a
-                href="https://hackerrank.com"
+                href="https://www.hackerrank.com/profile/sreekanth_j26"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black"
