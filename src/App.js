@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavbarComponent from "./components/NavbarComponent"; 
+import ResumeDownload from "./components/ResumeDownload";
 import Home from "./pages/Home";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
@@ -28,6 +29,7 @@ function App() {
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <ResumeDownload />
         <Footer/>
     </Router>
     </ErrorBoundary>
