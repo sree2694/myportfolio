@@ -119,3 +119,12 @@ Feel free to reach out if you have any questions or suggestions:
 - **Email:** your.email@example.com
 - **LinkedIn:** [Your LinkedIn](https://www.linkedin.com/in/yourprofile)
 - **GitHub:** [Your GitHub](https://github.com/yourusername)
+
+## 🚀 Deployment
+
+This project is deployed via **GitHub Pages**.  
+Live URL: [https://github.com/sree2694/myportfolio](https://github.com/sree2694/myportfolio)
+
+To deploy:
+```bash
+npm run deploy
