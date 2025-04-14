@@ -44,27 +44,29 @@
   }
   
   .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   }
   
+  /* Input Fields */
   .input-field {
-    background: #fff;
-    border-radius: 5px;
+    margin-bottom: 1.5rem !important;
   }
   
+  /* Submit Button */
   .submit-btn {
-    background: #007bff !important;
+    background-color: #1976d2 !important;
     color: #fff !important;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: background 0.3s ease-in-out;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
   }
   
   .submit-btn:hover {
-    background: #0056b3 !important;
+    background-color: #115293 !important;
   }
   
   /* Responsive Design */

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { TextField, Button, Grid } from "@mui/material";
+import { TextField, Button, Grid, Typography, Box } from "@mui/material";
 import "../css/Contact.css";
 
 const Contact = () => {
@@ -15,14 +15,14 @@ const Contact = () => {
 
     emailjs
       .send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS Service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS Template ID
+        "service_t7nj18m", // Your EmailJS Service ID
+        "template_upp84id", // Your EmailJS Template ID
         {
-          from_name: formData.name,
-          from_email: formData.email,
+          name: formData.name,
+          email: formData.email,
           message: formData.message,
         },
-        "YOUR_PUBLIC_KEY" // Replace with your EmailJS Public Key
+        "rp3rUqzIF6-ReghDe" // Your EmailJS Public Key
       )
       .then(
         (response) => {
@@ -38,17 +38,54 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact-container">
-      <h2 className="contact-title">Get in Touch</h2>
-      <Grid item xs={12} md={6}>
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <TextField  label="Name" name="name" value={formData.name} onChange={handleChange} required className="input-field" />
-          <TextField  label="Email" name="email" value={formData.email} onChange={handleChange} required className="input-field" />
-          <TextField  label="Message" name="message" multiline rows={4} value={formData.message} onChange={handleChange} required className="input-field" />
-          <Button variant="contained" type="submit" className="submit-btn">Send Message</Button>
-        </form>
+    <Box component="section" className="contact-container">
+      <Typography variant="h4" className="contact-title" gutterBottom>
+        Get in Touch
+      </Typography>
+
+      <Grid container spacing={2} justifyContent="center">
+        <Grid xs={12} md={6}>
+          <Box component="form" className="contact-form" onSubmit={handleSubmit} noValidate>
+            <TextField
+              label="Name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              fullWidth
+              margin="normal"
+              className="input-field"
+            />
+            <TextField
+              label="Email"
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              fullWidth
+              margin="normal"
+              className="input-field"
+            />
+            <TextField
+              label="Message"
+              name="message"
+              multiline
+              rows={4}
+              value={formData.message}
+              onChange={handleChange}
+              required
+              fullWidth
+              margin="normal"
+              className="input-field"
+            />
+            <Button variant="contained" type="submit" className="submit-btn" fullWidth>
+              Send Message
+            </Button>
+          </Box>
+        </Grid>
       </Grid>
-    </section>
+    </Box>
   );
 };
 

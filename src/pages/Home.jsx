@@ -53,46 +53,45 @@ const Home = () => {
         </div>
 
         <div className="home-text">
-          <Typography variant="body1" className="home-description">
-            <Typography variant="body1" paragraph>
-              <strong>Full Stack Developer</strong> with a strong command over
-              <strong> Java, Spring Boot, React, REST APIs</strong>, and
-              <strong> Microservices</strong>. I specialize in building
-              <strong> robust, scalable, and secure web applications</strong>{" "}
-              tailored to business needs.
-            </Typography>
-
-            <Typography variant="body1" paragraph>
-              With a passion for
-              <strong> tech writing, continuous learning, and problem-solving</strong>,
-              I’m not just a developer—I’m your
-              <strong> technical partner</strong> committed to quality, clarity,
-              and results.
-            </Typography>
-
-            <Box mt={3}  sx={{ py: 0, my: 0 }}>
-              <Typography variant="h6" gutterBottom sx={{ py: 0, my: 0 }}>
-                What I Bring to the Table:
-              </Typography>
-              <List>
-                {[
-                  "Scalable backend architecture with Java & Spring Boot",
-                  "Modern, responsive UIs with React & Material UI",
-                  "Clean code, performance optimization & best practices",
-                  "Passion for technical communication & documentation",
-                ].map((text, index) => (
-                  <ListItem key={index}  sx={{ py: 0, my: 0 }}>
-                    <ListItemIcon>
-                      <CheckCircleIcon color="primary" />
-                    </ListItemIcon>
-                    <ListItemText primary={text} />
-                  </ListItem>
-                ))}
-              </List>
-            </Box>
+          <Typography variant="body1" paragraph>
+            <strong>Full Stack Developer</strong> with a strong command over
+            <strong> Java, Spring Boot, React, REST APIs</strong>, and
+            <strong> Microservices</strong>. I specialize in building
+            <strong> robust, scalable, and secure web applications</strong>{" "}
+            tailored to business needs.
           </Typography>
 
-          <div className="cta-buttons" >
+          <Typography variant="body1" paragraph>
+            With a passion for
+            <strong> tech writing, continuous learning, and problem-solving</strong>,
+            I’m not just a developer—I’m your
+            <strong> technical partner</strong> committed to quality, clarity,
+            and results.
+          </Typography>
+
+          {/* ✅ Fixed list moved outside of Typography */}
+          <Box mt={3}>
+            <Typography variant="h6" gutterBottom>
+              What I Bring to the Table:
+            </Typography>
+            <List>
+              {[
+                "Scalable backend architecture with Java & Spring Boot",
+                "Modern, responsive UIs with React & Material UI",
+                "Clean code, performance optimization & best practices",
+                "Passion for technical communication & documentation",
+              ].map((text, index) => (
+                <ListItem key={index}>
+                  <ListItemIcon>
+                    <CheckCircleIcon color="primary" />
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItem>
+              ))}
+            </List>
+          </Box>
+
+          <div className="cta-buttons">
             <Typography sx={{ ml: 1 }} color="white">
               Check here:
             </Typography>
