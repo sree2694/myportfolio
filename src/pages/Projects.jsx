@@ -2,25 +2,34 @@ import React from "react";
 import "../css/Projects.css";
 import { Fade } from "@mui/material"; // Material-UI Animations
 import { FaReact, FaNodeJs, FaJava, FaDatabase, FaHtml5, FaCss3, FaBootstrap, FaGitAlt } from "react-icons/fa";
-import { SiExpress, SiSpringboot, SiMongodb, SiJavascript, SiFirebase } from "react-icons/si";
+import { SiExpress, SiSpringboot,SiPython, SiMongodb, SiJavascript, SiFirebase } from "react-icons/si";
 
 const techIcons = {
   ReactJS: <FaReact size={20} color="#61DBFB" />,
-  NodeJS: <FaNodeJs size={20} color="#68A063" />,
-  Java: <FaJava size={20} color="#007396" />,
-  MySQL: <FaDatabase size={20} color="#4479A1" />,
   ExpressJS: <SiExpress size={20} color="#ffffff" />,
-  SpringBoot: <SiSpringboot size={20} color="#6DB33F" />,
-  MongoDB: <SiMongodb size={20} color="#4DB33D" />,
-  JavaScript: <SiJavascript size={20} color="#F7DF1E" />,
+  NodeJS: <FaNodeJs size={20} color="#68A063" />,
+  Python: <SiPython size={20} color="#3776AB" />,
   HTML5: <FaHtml5 size={20} color="#E34F26" />,
   CSS3: <FaCss3 size={20} color="#1572B6" />,
+  JavaScript: <SiJavascript size={20} color="#F7DF1E" />,
   Bootstrap: <FaBootstrap size={20} color="#7952B3" />,
+  MongoDB: <SiMongodb size={20} color="#4DB33D" />,
+  SpringBoot: <SiSpringboot size={20} color="#6DB33F" />,
+  Java: <FaJava size={20} color="#007396" />,
+  MySQL: <FaDatabase size={20} color="#4479A1" />,
   Git: <FaGitAlt size={20} color="#F05032" />,
   Firebase: <SiFirebase size={20} color="#FFCA28" />,
 };
 
 const projectData = [
+  {
+    title: "MedAssist AI",
+    date: "April 2025 – May 2025",
+    description:
+      "AI-powered symptom checker using Cohere LLM + Machine Learning (Random Forest). Built with React & FastAPI. Suggests possible conditions & care tips in real-time.",
+    techStack: ["ReactJS", "NodeJS", "Python", "Cohere(LLM)", "Machine Learning", "FastAPI", "Render"],
+    demoLink: "https://ai-symptom-checker-delta.vercel.app/",
+  },
   {
     title: "Code Reacher",
     date: "Nov 2024 – Jan 2025",

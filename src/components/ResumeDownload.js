@@ -6,7 +6,7 @@ const ResumeDownload = () => {
   return (
     <Tooltip title="Download Resume">
      <IconButton
-        href="/FullStack_Developer_Resume.pdf" // Put your actual resume file path here
+        href="/SREEKANTH_J_FullStack_Developer_Resume.pdf" // Put your actual resume file path here
         download
         color="primary"
         sx={{
